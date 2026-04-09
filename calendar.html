@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p>デモ用（日付は下の input に反映されます）</p>
+  <div class="date-picker-group">
+    <label for="demo-date">選択日</label>
+    <input type="date" id="demo-date" name="demo-date" readonly inputmode="none" autocomplete="off">
+
+    <div class="calendar-host" data-target="demo-date">
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th class="cal-prev" aria-label="前の月">&laquo;</th>
+          <th class="cal-title" colspan="5"></th>
+          <th class="cal-next" aria-label="次の月">&raquo;</th>
+        </tr>
+        <tr>
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

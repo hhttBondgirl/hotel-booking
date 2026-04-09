@@ -1,0 +1,176 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+  }
+
+.body {
+    background: url(img/bg.png) no-repeat center center fixed;
+    background-size: cover;
+}
+  
+  table {
+    border-collapse: collapse;
+    border: 1px solid #eee;
+  }
+  
+  thead,
+  tfoot {
+    background-color: #eee;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  tbody td:first-child {
+    color: red;
+  }
+  
+  tbody td:last-child {
+    color: blue;
+  }
+  
+  tfoot {
+    font-weight: bold;
+  }
+  
+  td.disabled {
+    opacity: 0.3;
+  }
+  
+  td.today {
+    font-weight: bold;
+  }
+  
+  .cal-prev,
+  .cal-next {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .calendar-host {
+    display: none;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .calendar-host.is-open {
+    display: block;
+  }
+
+  tbody td[data-ymd] {
+    cursor: pointer;
+  }
+
+  td.selected {
+    background-color: #ff9900; /* 好きな色にしてね！ */
+    color: white;
+    border-radius: 50%;
+  }
+
+  /* ネイティブの日付ピッカー（アイコン・クリック時の UI）を抑止（自作カレンダーのみ使う） */
+  .date-picker-group input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .date-picker-group input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .date-picker-group input[type="date"]::-moz-calendar-picker-indicator {
+    display: none;
+  }
+
+
+
+input {
+    border: 1px solid #ccc; /* 他の入力欄と同じ色・太さに指定 */
+    outline: none;           /* クリックした時の青い枠を消す（お好みで） */
+    box-shadow: none;        /* 変な影を消す */
+    -webkit-appearance: none; /* 余計な装飾をリセット */
+    appearance: none;
+    padding: 4px;            /* 中の余白を他の欄と合わせる */
+    height: 24px;            /* 高さを合わせる */
+    background-color: #fff;  /* 背景を白で固定（readonlyだとグレーになるのを防ぐ） */
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 200px;
+}
+
+.submit-button {
+    background-color: #856c35;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 200px;
+    margin-top: 80px;
+}
+
+h1 {
+    text-align: center;
+    font-family:serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+main {
+    width: 80vw;
+    height: 85vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    background-color: #ffffff;
+    opacity: 0.95;
+}
+
+form {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.time-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.form-one {
+    margin-bottom: 20px;
+}
+
+.form-one input {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.message-label {
+    display: block; 
+    text-align: left;
+    margin-bottom: 5px;  
+    width: 500px;
+    margin: 40px auto 0 auto;
+}
+
+textarea {
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
