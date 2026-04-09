@@ -23,6 +23,11 @@
 * CSS
 * JavaScript（Vanilla JS）
 * php（Vanilla php）
+* MySQL
+* Railway（Deployment）
+* DBngin（Local Development Environment）
+* TablePlus（Local Development Environment）
+* Cursor（Local Development Environment）
 
 
 ---
