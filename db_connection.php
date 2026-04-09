@@ -2,7 +2,8 @@
 // db_connection.php
 
 // Railwayの環境変数があるかチェック、なければローカルの設定を使う
-$host = getenv('MYSQLHOST') ?: '127.0.0.1';
+// MYSQLHOST が取れない場合は、MYSQL_HOST や RAILWAY_PRIVATE_DOMAIN も探す設定
+$host = getenv('MYSQLHOST') ?: (getenv('RAILWAY_PRIVATE_DOMAIN') ?: '127.0.0.1');
 $dbname = getenv('MYSQLDATABASE') ?: 'yoyaku_db';
 $user = getenv('MYSQLUSER') ?: 'root';
 $pass = getenv('MYSQLPASSWORD') ?: '';
