@@ -1,19 +1,28 @@
 
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-// index.phpから送られてきたデータを受け取る
-// 念のため、データが空っぽじゃないかチェックするね
+
+// 1. まずはPOSTでデータが届いているかチェック
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name     = $_POST['name'];
     $email    = $_POST['email'];
     $checkin  = $_POST['checkin'];
     $checkout = $_POST['checkout'];
     $message  = $_POST['message'];
+
+   // 2. 日付オブジェクトに変換して比較する
+   $todayObj = new DateTime('today'); // 今日の00:00:00
+   $checkinObj = new DateTime($checkin); // 届いたチェックイン日
+
+   if ($checkinObj < $todayObj) {
+       echo "申し訳ございません。過去の日付は選べませんので、もう一度選び直してください。";
+       echo '<br><a href="index.php">戻る</a>';
+       exit;
+   }
+
 } else {
-    // 直接このページに来ちゃった場合は入力画面に戻すよ
     header("Location: index.php");
     exit;
 }

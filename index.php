@@ -24,57 +24,60 @@
             </div>
 
             <div class="time-container">
-            <div class="date-picker-group">
-                <label for="checkin">チェックイン：</label>
-                <input type="date" name="checkin" id="checkin" required readonly inputmode="none" autocomplete="off">
-                <div class="calendar-host" data-target="checkin">
-                    <table class="calendar-table">
-                        <thead>
-                            <tr>
-                                <th class="cal-prev" aria-label="前の月">&laquo;</th>
-                                <th class="cal-title" colspan="5"></th>
-                                <th class="cal-next" aria-label="次の月">&raquo;</th>
-                            </tr>
-                            <tr>
-                                <th>日</th>
-                                <th>月</th>
-                                <th>火</th>
-                                <th>水</th>
-                                <th>木</th>
-                                <th>金</th>
-                                <th>土</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+                <div class="date-picker-group">
+                    <label for="checkin">チェックイン：</label>
+                    <!-- <input type="date" name="checkin" id="checkin" required readonly inputmode="none" autocomplete="off"> -->
+                    <input type="date" name="checkin" id="checkin" required readonly inputmode="none"
+                        min="<?php echo date('Y-m-d'); ?>">
+                    <div class="calendar-host" data-target="checkin">
+                        <table class="calendar-table">
+                            <thead>
+                                <tr>
+                                    <th class="cal-prev" aria-label="前の月">&laquo;</th>
+                                    <th class="cal-title" colspan="5"></th>
+                                    <th class="cal-next" aria-label="次の月">&raquo;</th>
+                                </tr>
+                                <tr>
+                                    <th>日</th>
+                                    <th>月</th>
+                                    <th>火</th>
+                                    <th>水</th>
+                                    <th>木</th>
+                                    <th>金</th>
+                                    <th>土</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div class="date-picker-group">
-                <label for="checkout">チェックアウト：</label>
-                <input type="date" name="checkout" id="checkout" required readonly inputmode="none" autocomplete="off">
-                <div class="calendar-host" data-target="checkout">
-                    <table class="calendar-table">
-                        <thead>
-                            <tr>
-                                <th class="cal-prev" aria-label="前の月">&laquo;</th>
-                                <th class="cal-title" colspan="5"></th>
-                                <th class="cal-next" aria-label="次の月">&raquo;</th>
-                            </tr>
-                            <tr>
-                                <th>日</th>
-                                <th>月</th>
-                                <th>火</th>
-                                <th>水</th>
-                                <th>木</th>
-                                <th>金</th>
-                                <th>土</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+                <div class="date-picker-group">
+                    <label for="checkout">チェックアウト：</label>
+                    <input type="date" name="checkout" id="checkout" required readonly inputmode="none"
+                        autocomplete="off">
+                    <div class="calendar-host" data-target="checkout">
+                        <table class="calendar-table">
+                            <thead>
+                                <tr>
+                                    <th class="cal-prev" aria-label="前の月">&laquo;</th>
+                                    <th class="cal-title" colspan="5"></th>
+                                    <th class="cal-next" aria-label="次の月">&raquo;</th>
+                                </tr>
+                                <tr>
+                                    <th>日</th>
+                                    <th>月</th>
+                                    <th>火</th>
+                                    <th>水</th>
+                                    <th>木</th>
+                                    <th>金</th>
+                                    <th>土</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <div>

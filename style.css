@@ -54,6 +54,12 @@ body {
     display: none;
     margin-top: 8px;
     margin-bottom: 16px;
+    position: absolute; /* 浮かせる！ */
+    top: 100%;          /* 入力フォームのすぐ下に配置 */
+    left: 0;
+    z-index: 100;       /* 他の要素より上に重ねる（数字は適宜調整） */
+    background: #fff;   /* 背景を白くして、下の文字が透けないようにする */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 浮いてる感を出すとおしゃれ */
   }
 
   .calendar-host.is-open {
@@ -68,6 +74,10 @@ body {
     background-color: #ff9900; /* 好きな色にしてね！ */
     color: white;
     border-radius: 50%;
+  }
+
+  .date-picker-group{
+    position: relative;
   }
 
   /* ネイティブの日付ピッカー（アイコン・クリック時の UI）を抑止（自作カレンダーのみ使う） */
@@ -145,9 +155,11 @@ form {
 
 .time-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 40px;
     align-items: center;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .form-one {
@@ -158,6 +170,19 @@ form {
     margin-bottom: 20px;
     margin: 0 auto;
     width: 500px;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+.form-one label {
+  margin-bottom: 20px;
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+  width: 500px;
 }
 
 .message-label {
