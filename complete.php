@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // 3. 貯金箱にデータを入れるためのSQL（命令書）を準備する
-        // Laravelの Eloquent(save()) が裏でやってくれていたことだよ！
+        // Laravelの Eloquent(save()) が裏でやってくれていたこと！
         $sql = "INSERT INTO reservations (name, email, checkin, checkout, message) 
                 VALUES (:name, :email, :checkin, :checkout, :message)";
         

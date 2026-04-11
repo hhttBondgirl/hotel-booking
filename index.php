@@ -26,7 +26,6 @@
             <div class="time-container">
                 <div class="date-picker-group">
                     <label for="checkin">チェックイン：</label>
-                    <!-- <input type="date" name="checkin" id="checkin" required readonly inputmode="none" autocomplete="off"> -->
                     <input type="date" name="checkin" id="checkin" required readonly inputmode="none"
                         min="<?php echo date('Y-m-d'); ?>">
                     <div class="calendar-host" data-target="checkin">

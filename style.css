@@ -78,12 +78,14 @@ body {
 
   .date-picker-group{
     position: relative;
+    width: 45%;
   }
 
   /* ネイティブの日付ピッカー（アイコン・クリック時の UI）を抑止（自作カレンダーのみ使う） */
   .date-picker-group input[type="date"] {
     -webkit-appearance: none;
     appearance: none;
+    width: 100%;
   }
 
   .date-picker-group input[type="date"]::-webkit-calendar-picker-indicator {
@@ -109,7 +111,6 @@ input {
     border-radius: 4px;
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
-    width: 200px;
 }
 
 .submit-button {
@@ -151,25 +152,27 @@ main {
 form {
     padding-top: 40px;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .time-container {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
     align-items: center;
-    width: 500px;
+    width: 80%;
     margin: 0 auto;
 }
 
 .form-one {
-    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto 20px;
 }
 
 .form-one input {
     margin-bottom: 20px;
     margin: 0 auto;
-    width: 500px;
+    width: 100%;
 }
 
 label {
@@ -182,20 +185,47 @@ label {
   text-align: left;
   display: block;
   margin: 0 auto;
-  width: 500px;
+  width: 100%;
 }
 
 .message-label {
     display: block; 
     text-align: left;
     margin-bottom: 5px;  
-    width: 500px;
+    width: 80%;
     margin: 40px auto 0 auto;
 }
 
 textarea {
-    width: 500px;
+    width: 80%;
     height: 100px;
     margin: 0 auto;
     display: block;
 }
+
+@media screen and (max-width:768px) {
+  .time-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .date-picker-group {
+    width: 100%;
+  }
+
+
+  .form-one {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .message-label {
+    width: 100%;
+  }
+}
+

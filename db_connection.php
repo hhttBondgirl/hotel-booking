@@ -1,5 +1,4 @@
 <?php
-// db_connection.php
 
 // Railwayの環境変数があるかチェック、なければローカルの設定を使う
 // MYSQLHOST が取れない場合は、MYSQL_HOST や RAILWAY_PRIVATE_DOMAIN も探す設定
@@ -31,5 +30,5 @@ try {
     // ---------------------------------------------------
     
 } catch (PDOException $e) {
-    die("接続に失敗したよ...: " . $e->getMessage());
+    die("接続に失敗しました: " . $e->getMessage());
 }
