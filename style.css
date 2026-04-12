@@ -6,6 +6,10 @@ body {
 .body {
     background: url(img/bg.png) no-repeat center center fixed;
     background-size: cover;
+    margin: 0; 
+    min-height: 100vh; /* 画面の高さ100%分を最低限確保する */
+    display: flex;     /* 中身が少なくても背景を広げるために有効 */
+    flex-direction: column;
 }
   
   table {
@@ -138,7 +142,7 @@ h1 {
 
 main {
     width: 80vw;
-    height: 85vh;
+    min-height: 85vh;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -155,6 +159,7 @@ form {
     width: 80%;
     margin: 0 auto;
 }
+
 
 .time-container {
     display: flex;
@@ -227,5 +232,12 @@ textarea {
   .message-label {
     width: 100%;
   }
-}
 
+  main {
+    width: 90vw;   /* スマホでは横幅をもう少し広げると入力しやすくなるよ */
+    padding: 10px;
+  }
+form {
+    width: 96%;   /* フォームを横幅いっぱいにする */
+  }
+}
